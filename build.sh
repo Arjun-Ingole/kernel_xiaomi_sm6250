@@ -30,7 +30,7 @@ make -j$(nproc --all) O=out ARCH=arm64 CC=clang LD=ld.lld AR=llvm-ar NM=llvm-nm 
 
 if [ -f "out/arch/arm64/boot/Image.gz-dtb" ] && [ -f "out/arch/arm64/boot/dtbo.img" ]; then
 echo -e "\nKernel compiled succesfully! Zipping up...\n"
-if ! git clone -q https://github.com/imjyotiraditya/AnyKernel3 -b miatoll; then
+if ! git clone -q https://github.com/Arjun-Ingole/AnyKernel3 -b miatoll; then
 echo -e "\nCloning AnyKernel3 repo failed! Aborting..."
 exit 1
 fi
